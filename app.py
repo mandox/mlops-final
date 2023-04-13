@@ -44,7 +44,7 @@ def GetValues():
         
     op1 = predict_api(data_json)
 
-    return render_template('index.html', prediction_text='The person may: {}'.format(op1))
+    return render_template('index.html', prediction_text='La persona Podria ser: {}'.format(op1))
 
 def read_params(config_path):
     with open(config_path) as yaml_file:
@@ -83,7 +83,7 @@ def predict_api(data_json):
                 return "error {}".format(str(e)) 
             return prediction 
         else:
-            return "Values entered are not Numerical"    
+            return "Valores ingresados No Numericos"    
     except Exception as e:
         return "error {}".format(str(e))
 
